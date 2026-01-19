@@ -58,85 +58,66 @@
                 <p class="section-subtitle">Select the approach that best fits your goals</p>
             </div>
 
-            <!-- Path Toggle Switch -->
-            <div class="path-toggle-container">
-                <div class="toggle-wrapper">
-                    <button class="toggle-option active" data-path="traditional">
-                        <span class="toggle-icon">🎓</span>
-                        <span class="toggle-label">Traditional Route</span>
-                        <span class="recommended-badge">⭐ Recommended</span>
-                    </button>
-                    <button class="toggle-option" data-path="modern">
-                        <span class="toggle-icon">⚡</span>
-                        <span class="toggle-label">Modern Route</span>
-                        <span class="fast-badge">🚀 Fast Track</span>
-                    </button>
+            <!-- Premium Path Selection Interface -->
+            <div class="path-selector-container">
+                <!-- Traditional Card (Default Selected) -->
+                <div class="selection-card traditional active" onclick="selectPath('traditional')" role="button"
+                    tabindex="0">
+                    <div class="card-glow-effect"></div>
+                    <div class="card-header">
+                        <span class="selection-badge recommended">
+                            <span class="pulse-dot"></span> Recommended for Students
+                        </span>
+                        <div class="selection-icon">🎓</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Traditional Route</h3>
+                        <div class="meta-tags">
+                            <span class="meta-tag">⚡ Foundation First</span>
+                            <span class="meta-tag">📅 6-8 Months</span>
+                        </div>
+                        <p class="card-desc">The gold standard for AI careers. Build deep understanding from scratch to
+                            mastery.</p>
+                        <ul class="benefit-list">
+                            <li>✅ Strong Conceptual Foundation</li>
+                            <li>✅ Compete for Top Tier Jobs</li>
+                            <li>✅ Master All Domains (CV, NLP, GenAI)</li>
+                        </ul>
+                        <div class="cta-fake-button">Selected</div>
+                    </div>
+                </div>
+
+                <!-- Modern Card -->
+                <div class="selection-card modern" onclick="selectPath('modern')" role="button" tabindex="0">
+                    <div class="card-glow-effect"></div>
+                    <div class="card-header">
+                        <span class="selection-badge fast">
+                            <span class="flash-icon">⚡</span> Fast Track
+                        </span>
+                        <div class="selection-icon">🚀</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Modern Route</h3>
+                        <div class="meta-tags">
+                            <span class="meta-tag">🛠️ GenAI First</span>
+                            <span class="meta-tag">📅 3-4 Months</span>
+                        </div>
+                        <p class="card-desc">Speed-focused path. Jump straight into building apps with existing tools.
+                        </p>
+                        <ul class="benefit-list">
+                            <li>🚀 Build Apps Immediately</li>
+                            <li>🛠️ Focus on Tools & Frameworks</li>
+                            <li>👨‍💻 Best for Experienced Devs</li>
+                        </ul>
+                        <div class="cta-fake-button">Select Path</div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Path Info Cards -->
-            <div class="path-info active" id="traditional-info">
-                <div class="info-card">
-                    <div class="info-header">
-                        <h3>Traditional Route - Build Strong Foundations</h3>
-                        <p class="info-timeline">⏱️ 6-8 months | 3-4 hours/day</p>
-                    </div>
-                    <p class="info-description">
-                        <strong>Recommended for college students!</strong> Start with fundamentals, build a strong
-                        foundation in Data Science, Machine Learning, and Deep Learning, then master Gen AI and Agentic
-                        AI. This gives you better job prospects and comprehensive understanding.
-                    </p>
-                    <div class="info-highlights">
-                        <div class="highlight-item">
-                            <span class="highlight-icon">✅</span>
-                            <span>Strong fundamentals first</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">✅</span>
-                            <span>Better job prospects</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">✅</span>
-                            <span>Comprehensive understanding</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">✅</span>
-                            <span>Easier to learn advanced topics</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="path-info" id="modern-info">
-                <div class="info-card">
-                    <div class="info-header">
-                        <h3>Modern Route - Quick Gen AI Skills</h3>
-                        <p class="info-timeline">⏱️ 3-4 months | 4-5 hours/day</p>
-                    </div>
-                    <p class="info-description">
-                        Start with Gen AI immediately, learn R AG, Agentic AI, and frameworks first, then go back to
-                        learn ML/DL fundamentals. Ideal for quick skill acquisition and hands-on learners with existing
-                        coding experience.
-                    </p>
-                    <div class="info-highlights">
-                        <div class="highlight-item">
-                            <span class="highlight-icon">⚡</span>
-                            <span>Quick Gen AI skills</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">⚡</span>
-                            <span>Hands-on from day one</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">⚡</span>
-                            <span>Best for experienced coders</span>
-                        </div>
-                        <div class="highlight-item">
-                            <span class="highlight-icon">⚡</span>
-                            <span>Faster project delivery</span>
-                        </div>
-                    </div>
-                </div>
+            <!-- Dynamic Info Banner (Contextual Help) -->
+            <div class="path-context-banner">
+                <p id="context-text">👇 <strong>Traditional Route</strong> is currently active. Scroll down to see your
+                    8-step roadmap.</p>
             </div>
         </div>
     </section>

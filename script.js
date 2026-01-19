@@ -1,44 +1,56 @@
 // ===========================
-// PATH TOGGLE FUNCTIONALITY
+// PREMUM PATH SELECTOR LOGIC
 // ===========================
 
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleButtons = document.querySelectorAll('.toggle-option');
+// Expose function globally so onClick in HTML works
+window.selectPath = function (pathType) {
+    const traditionalCard = document.querySelector('.selection-card.traditional');
+    const modernCard = document.querySelector('.selection-card.modern');
     const traditionalRoadmap = document.getElementById('traditional-roadmap');
     const modernRoadmap = document.getElementById('modern-roadmap');
-    const traditionalInfo = document.getElementById('traditional-info');
-    const modernInfo = document.getElementById('modern-info');
+    const contextText = document.getElementById('context-text');
 
-    // Set traditional as default
+    // Reset States
+    traditionalCard.classList.remove('active');
+    modernCard.classList.remove('active');
+
+    // Reset Button Text
+    traditionalCard.querySelector('.cta-fake-button').textContent = "Select Path";
+    modernCard.querySelector('.cta-fake-button').textContent = "Select Path";
+
+    // Activate Selected
+    if (pathType === 'traditional') {
+        traditionalCard.classList.add('active');
+        traditionalCard.querySelector('.cta-fake-button').textContent = "Selected";
+
+        traditionalRoadmap.style.display = 'block';
+        modernRoadmap.style.display = 'none';
+
+        contextText.innerHTML = "👇 <strong>Traditional Route</strong> is active. Scroll down for the 8-step foundational path.";
+
+        // Scroll slightly to show change
+        traditionalRoadmap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    } else {
+        modernCard.classList.add('active');
+        modernCard.querySelector('.cta-fake-button').textContent = "Selected";
+
+        traditionalRoadmap.style.display = 'none';
+        modernRoadmap.style.display = 'block';
+
+        contextText.innerHTML = "👇 <strong>Modern Route</strong> is active. Scroll down for the 7-step fast-track path.";
+
+        modernRoadmap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Initial State Check (Ensure Traditional is visible by default)
+    const traditionalRoadmap = document.getElementById('traditional-roadmap');
+    const modernRoadmap = document.getElementById('modern-roadmap');
+
     if (traditionalRoadmap) traditionalRoadmap.style.display = 'block';
     if (modernRoadmap) modernRoadmap.style.display = 'none';
-
-    toggleButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const path = button.getAttribute('data-path');
-
-            // Update active state
-            toggleButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            // Show/hide corresponding roadmap
-            if (path === 'traditional') {
-                traditionalRoadmap.style.display = 'block';
-                modernRoadmap.style.display = 'none';
-                traditionalInfo.classList.add('active');
-                modernInfo.classList.remove('active');
-            } else {
-                traditionalRoadmap.style.display = 'none';
-                modernRoadmap.style.display = 'block';
-                traditionalInfo.classList.remove('active');
-                modernInfo.classList.add('active');
-            }
-
-            // Smooth scroll to roadmap
-            const targetSection = path === 'traditional' ? traditionalRoadmap : modernRoadmap;
-            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-    });
 });
 
 // ===========================
