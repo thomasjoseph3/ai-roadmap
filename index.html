@@ -55,107 +55,99 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Choose Your Learning Path</h2>
-                <p class="section-subtitle">Select the approach that best fits your goals and learning style</p>
+                <p class="section-subtitle">Select the approach that best fits your goals</p>
             </div>
 
-            <div class="path-cards">
-                <!-- Traditional Route Card (Recommended) -->
-                <div class="path-card recommended">
-                    <div class="path-badge">⭐ Recommended for College Students</div>
-                    <div class="path-icon">🎓</div>
-                    <h3 class="path-title">Traditional Route</h3>
-                    <p class="path-timeline">⏱️ 6-8 months | 3-4 hours/day</p>
-                    <p class="path-description">
-                        Build strong fundamentals first, then master advanced AI. Perfect for students with time to
-                        invest in a solid foundation.
-                    </p>
-
-                    <div class="path-benefits">
-                        <h4>Learning Order:</h4>
-                        <ol class="path-order">
-                            <li>Fundamentals & Python</li>
-                            <li>Data Science & ML</li>
-                            <li>Deep Learning & NLP</li>
-                            <li>Gen AI & Agentic AI</li>
-                            <li>MLOps & Deployment</li>
-                        </ol>
-                    </div>
-
-                    <div class="path-pros-cons">
-                        <div class="pros">
-                            <h5>✅ Best For:</h5>
-                            <ul>
-                                <li>College students & freshers</li>
-                                <li>Strong foundation building</li>
-                                <li>Better job prospects</li>
-                                <li>Comprehensive understanding</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <a href="#traditional-roadmap" class="btn btn-primary">View Traditional Path</a>
-                </div>
-
-                <!-- Modern Route Card -->
-                <div class="path-card">
-                    <div class="path-badge fast-track">🚀 Fast Track</div>
-                    <div class="path-icon">⚡</div>
-                    <h3 class="path-title">Modern Route</h3>
-                    <p class="path-timeline">⏱️ 3-4 months | 4-5 hours/day</p>
-                    <p class="path-description">
-                        Start with Gen AI immediately, then learn fundamentals. Ideal for quick skill acquisition and
-                        hands-on projects.
-                    </p>
-
-                    <div class="path-benefits">
-                        <h4>Learning Order:</h4>
-                        <ol class="path-order">
-                            <li>Generative AI Basics</li>
-                            <li>Agentic AI & RAG</li>
-                            <li>AI Frameworks (LangChain)</li>
-                            <li>Then: ML/DL Fundamentals</li>
-                            <li>Portfolio & Deployment</li>
-                        </ol>
-                    </div>
-
-                    <div class="path-pros-cons">
-                        <div class="pros">
-                            <h5>✅ Best For:</h5>
-                            <ul>
-                                <li>Quick Gen AI skills</li>
-                                <li>Hands-on learners</li>
-                                <li>Existing coding experience</li>
-                                <li>Urgent project needs</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <a href="#modern-roadmap" class="btn btn-secondary">View Modern Path</a>
+            <!-- Path Toggle Switch -->
+            <div class="path-toggle-container">
+                <div class="toggle-wrapper">
+                    <button class="toggle-option active" data-path="traditional">
+                        <span class="toggle-icon">🎓</span>
+                        <span class="toggle-label">Traditional Route</span>
+                        <span class="recommended-badge">⭐ Recommended</span>
+                    </button>
+                    <button class="toggle-option" data-path="modern">
+                        <span class="toggle-icon">⚡</span>
+                        <span class="toggle-label">Modern Route</span>
+                        <span class="fast-badge">🚀 Fast Track</span>
+                    </button>
                 </div>
             </div>
 
-            <div class="path-recommendation">
-                <div class="recommendation-box">
-                    <div class="recommendation-icon">💡</div>
-                    <div class="recommendation-content">
-                        <h4>Our Recommendation for College Students:</h4>
-                        <p>We <strong>strongly recommend the Traditional Route</strong> for college students. Building a
-                            strong foundation in fundamentals will give you better job prospects, deeper understanding,
-                            and make advanced topics much easier to learn. The Modern Route is better suited for
-                            experienced developers who need quick Gen AI skills for immediate projects.</p>
+            <!-- Path Info Cards -->
+            <div class="path-info active" id="traditional-info">
+                <div class="info-card">
+                    <div class="info-header">
+                        <h3>Traditional Route - Build Strong Foundations</h3>
+                        <p class="info-timeline">⏱️ 6-8 months | 3-4 hours/day</p>
+                    </div>
+                    <p class="info-description">
+                        <strong>Recommended for college students!</strong> Start with fundamentals, build a strong
+                        foundation in Data Science, Machine Learning, and Deep Learning, then master Gen AI and Agentic
+                        AI. This gives you better job prospects and comprehensive understanding.
+                    </p>
+                    <div class="info-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">✅</span>
+                            <span>Strong fundamentals first</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">✅</span>
+                            <span>Better job prospects</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">✅</span>
+                            <span>Comprehensive understanding</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">✅</span>
+                            <span>Easier to learn advanced topics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="path-info" id="modern-info">
+                <div class="info-card">
+                    <div class="info-header">
+                        <h3>Modern Route - Quick Gen AI Skills</h3>
+                        <p class="info-timeline">⏱️ 3-4 months | 4-5 hours/day</p>
+                    </div>
+                    <p class="info-description">
+                        Start with Gen AI immediately, learn R AG, Agentic AI, and frameworks first, then go back to
+                        learn ML/DL fundamentals. Ideal for quick skill acquisition and hands-on learners with existing
+                        coding experience.
+                    </p>
+                    <div class="info-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">⚡</span>
+                            <span>Quick Gen AI skills</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">⚡</span>
+                            <span>Hands-on from day one</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">⚡</span>
+                            <span>Best for experienced coders</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">⚡</span>
+                            <span>Faster project delivery</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Traditional Roadmap Section -->
-    <section id="traditional-roadmap" class="roadmap-section">
+    <!-- Modern Route Roadmap Section (Current 7 steps) -->
+    <section id="modern-roadmap" class="roadmap-section modern-route active-roadmap">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Traditional Route: The Learning Path</h2>
-                <p class="section-subtitle">Follow these steps progressively to build your AI expertise from the ground
-                    up</p>
+                <h2 class="section-title">Modern Route: Gen AI First Approach</h2>
+                <p class="section-subtitle">Start with Gen AI frameworks and applications, then learn fundamentals - 7
+                    progressive steps</p>
             </div>
 
             <div class="timeline">
@@ -361,148 +353,213 @@
         </div>
     </section>
 
-    <!-- Modern Route Roadmap Section -->
-    <section id="modern-roadmap" class="roadmap-section modern-route">
+    <!-- Traditional Route Roadmap Section (Fundamentals First) -->
+    <section id="traditional-roadmap" class="roadmap-section traditional-route">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Modern Route: Fast Track Gen AI</h2>
-                <p class="section-subtitle">Start with Generative AI immediately, then build fundamentals - ideal for
-                    quick skill acquisition</p>
+                <h2 class="section-title">Traditional Route: Build Strong Foundations</h2>
+                <p class="section-subtitle">Master fundamentals first, then progress to advanced AI - recommended for
+                    college students</p>
             </div>
 
             <div class="timeline">
-                <!-- Modern Step 1 -->
+                <!-- Traditional Step 1 -->
                 <div class="roadmap-step" data-step="1">
                     <div class="step-marker">
                         <div class="step-number">1</div>
                     </div>
                     <div class="step-card">
-                        <div class="step-icon">🤖</div>
-                        <h3 class="step-title">Master Generative AI Basics</h3>
+                        <div class="step-icon">🐍</div>
+                        <h3 class="step-title">Python Programming Fundamentals</h3>
                         <p class="step-description">
-                            Jump straight into Gen AI! Learn how LLMs work, prompt engineering, and start building Gen
-                            AI applications immediately using existing APIs and tools.
+                            Start with Python programming language - the foundation of AI development. Learn syntax,
+                            data structures, functions, OOP concepts, and libraries essential for data science and AI.
                         </p>
                         <div class="step-topics">
-                            <span class="topic-tag">LLMs</span>
-                            <span class="topic-tag">ChatGPT API</span>
-                            <span class="topic-tag">Prompt Engineering</span>
-                            <span class="topic-tag">Gen AI Basics</span>
+                            <span class="topic-tag">Python Basics</span>
+                            <span class="topic-tag">Data Structures</span>
+                            <span class="topic-tag">NumPy</span>
+                            <span class="topic-tag">Pandas</span>
                         </div>
                         <div class="step-goal">
-                            <strong>Goal:</strong> Build your first Gen AI application within weeks
+                            <strong>Goal:</strong> Master Python programming for AI development
                         </div>
                     </div>
                 </div>
 
-                <!-- Modern Step 2 -->
+                <!-- Traditional Step 2 -->
                 <div class="roadmap-step" data-step="2">
                     <div class="step-marker">
                         <div class="step-number">2</div>
                     </div>
                     <div class="step-card">
-                        <div class="step-icon">🔗</div>
-                        <h3 class="step-title">Agentic AI & RAG Systems</h3>
+                        <div class="step-icon">📊</div>
+                        <h3 class="step-title">Data Science Fundamentals</h3>
                         <p class="step-description">
-                            Learn to build advanced AI agents and RAG (Retrieval Augmented Generation) systems. Create
-                            AI that can interact with data, perform tasks, and make decisions autonomously.
+                            Learn data science essentials - statistics, probability, data visualization, exploratory
+                            data analysis. Master data manipulation, cleaning, and preprocessing techniques.
                         </p>
                         <div class="step-topics">
-                            <span class="topic-tag">RAG</span>
-                            <span class="topic-tag">AI Agents</span>
-                            <span class="topic-tag">Vector Databases</span>
-                            <span class="topic-tag">Embeddings</span>
-                        </div>
-                        <div class="step-projects">
-                            <strong>Projects to Try:</strong>
-                            <ul>
-                                <li>Document Q&A system using RAG</li>
-                                <li>AI agent for task automation</li>
-                                <li>Chatbot with company knowledge base</li>
-                            </ul>
+                            <span class="topic-tag">Statistics</span>
+                            <span class="topic-tag">Probability</span>
+                            <span class="topic-tag">Data Visualization</span>
+                            <span class="topic-tag">EDA</span>
                         </div>
                         <div class="step-goal">
-                            <strong>Goal:</strong> Build intelligent AI agents and RAG applications
+                            <strong>Goal:</strong> Build strong data science foundation
                         </div>
                     </div>
                 </div>
 
-                <!-- Modern Step 3 -->
+                <!-- Traditional Step 3 -->
                 <div class="roadmap-step" data-step="3">
                     <div class="step-marker">
                         <div class="step-number">3</div>
                     </div>
                     <div class="step-card">
-                        <div class="step-icon">⚙️</div>
-                        <h3 class="step-title">AI Frameworks & Tools</h3>
+                        <div class="step-icon">🤖</div>
+                        <h3 class="step-title">Machine Learning</h3>
                         <p class="step-description">
-                            Master LangChain, LangGraph, and other AI frameworks. Learn to build production-ready AI
-                            applications with proper architecture and deployment strategies.
+                            Master supervised and unsupervised learning algorithms. Learn regression, classification,
+                            clustering, and ensemble methods. Work with Scikit-learn and build ML models from scratch.
                         </p>
                         <div class="step-topics">
-                            <span class="topic-tag">LangChain</span>
-                            <span class="topic-tag">LangGraph</span>
-                            <span class="topic-tag">LlamaIndex</span>
-                            <span class="topic-tag">Streamlit</span>
+                            <span class="topic-tag">Supervised Learning</span>
+                            <span class="topic-tag">Unsupervised Learning</span>
+                            <span class="topic-tag">Scikit-learn</span>
+                            <span class="topic-tag">Model Evaluation</span>
                         </div>
                         <div class="step-goal">
-                            <strong>Goal:</strong> Build scalable Gen AI applications with frameworks
+                            <strong>Goal:</strong> Understand core machine learning algorithms
                         </div>
                     </div>
                 </div>
 
-                <!-- Modern Step 4 -->
+                <!-- Traditional Step 4 -->
                 <div class="roadmap-step" data-step="4">
                     <div class="step-marker">
                         <div class="step-number">4</div>
                     </div>
                     <div class="step-card">
-                        <div class="step-icon">📚</div>
-                        <h3 class="step-title">Learn ML/DL Fundamentals</h3>
+                        <div class="step-icon">👁️</div>
+                        <h3 class="step-title">Computer Vision</h3>
                         <p class="step-description">
-                            Now go back and learn the fundamentals - Machine Learning, Deep Learning basics. This gives
-                            you deeper understanding and helps you customize models.
+                            Learn image processing, object detection, and recognition. Work with CNNs, OpenCV, and
+                            modern architectures like ResNet, YOLO. Build projects on image classification and
+                            segmentation.
                         </p>
                         <div class="step-topics">
-                            <span class="topic-tag">ML Basics</span>
-                            <span class="topic-tag">Neural Networks</span>
-                            <span class="topic-tag">Python Libraries</span>
-                            <span class="topic-tag">Data Science</span>
+                            <span class="topic-tag">CNNs</span>
+                            <span class="topic-tag">OpenCV</span>
+                            <span class="topic-tag">Object Detection</span>
+                            <span class="topic-tag">Image Processing</span>
                         </div>
                         <div class="step-goal">
-                            <strong>Goal:</strong> Understand the foundations behind AI systems
+                            <strong>Goal:</strong> Master computer vision techniques
                         </div>
                     </div>
                 </div>
 
-                <!-- Modern Step 5 -->
+                <!-- Traditional Step 5 -->
                 <div class="roadmap-step" data-step="5">
                     <div class="step-marker">
                         <div class="step-number">5</div>
                     </div>
                     <div class="step-card">
-                        <div class="step-icon">🚀</div>
-                        <h3 class="step-title">Portfolio & Deployment</h3>
+                        <div class="step-icon">🧠</div>
+                        <h3 class="step-title">Deep Learning</h3>
                         <p class="step-description">
-                            Build an impressive portfolio of Gen AI projects. Learn deployment, MLOps, and LLMOps.
-                            Create production-ready applications that showcase your skills.
+                            Dive deep into neural networks. Master PyTorch/TensorFlow, understand backpropagation,
+                            optimization algorithms, and modern architectures. Build neural networks from fundamentals.
                         </p>
                         <div class="step-topics">
+                            <span class="topic-tag">Neural Networks</span>
+                            <span class="topic-tag">PyTorch</span>
+                            <span class="topic-tag">TensorFlow</span>
+                            <span class="topic-tag">Optimization</span>
+                        </div>
+                        <div class="step-goal">
+                            <strong>Goal:</strong> Build and train deep neural networks
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Traditional Step 6 -->
+                <div class="roadmap-step" data-step="6">
+                    <div class="step-marker">
+                        <div class="step-number">6</div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">💬</div>
+                        <h3 class="step-title">Natural Language Processing (NLP)</h3>
+                        <p class="step-description">
+                            Master text processing, tokenization, embeddings. Learn RNNs, LSTMs, Transformers. Work with
+                            BERT, GPT architectures. Build chatbots and text classification systems.
+                        </p>
+                        <div class="step-topics">
+                            <span class="topic-tag">Text Processing</span>
+                            <span class="topic-tag">Transformers</span>
+                            <span class="topic-tag">BERT</span>
+                            <span class="topic-tag">Embeddings</span>
+                        </div>
+                        <div class="step-goal">
+                            <strong>Goal:</strong> Understand language models and NLP techniques
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Traditional Step 7 -->
+                <div class="roadmap-step" data-step="7">
+                    <div class="step-marker">
+                        <div class="step-number">7</div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">✨</div>
+                        <h3 class="step-title">Generative AI</h3>
+                        <p class="step-description">
+                            Now you're ready for Gen AI! Learn LLMs, prompt engineering, fine-tuning. Work with GPT,
+                            LLaMA, Qwen. Build Gen AI applications using your strong foundation.
+                        </p>
+                        <div class="step-topics">
+                            <span class="topic-tag">LLMs</span>
+                            <span class="topic-tag">Prompt Engineering</span>
+                            <span class="topic-tag">Fine-tuning</span>
+                            <span class="topic-tag">GPT/LLaMA</span>
+                        </div>
+                        <div class="step-goal">
+                            <strong>Goal:</strong> Master Generative AI with strong fundamentals
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Traditional Step 8 -->
+                <div class="roadmap-step" data-step="8">
+                    <div class="step-marker">
+                        <div class="step-number">8</div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon">🚀</div>
+                        <h3 class="step-title">Agentic AI, MLOps & Portfolio</h3>
+                        <p class="step-description">
+                            Learn RAG, AI agents, LangChain, LangGraph. Master MLOps, LLMOps, deployment pipelines.
+                            Build comprehensive portfolio with end-to-end projects demonstrating all skills.
+                        </p>
+                        <div class="step-topics">
+                            <span class="topic-tag">RAG</span>
+                            <span class="topic-tag">AI Agents</span>
+                            <span class="topic-tag">MLOps</span>
                             <span class="topic-tag">LLMOps</span>
-                            <span class="topic-tag">Docker</span>
-                            <span class="topic-tag">Cloud Deployment</span>
-                            <span class="topic-tag">Portfolio</span>
                         </div>
                         <div class="step-projects">
                             <strong>Projects to Try:</strong>
                             <ul>
-                                <li>End-to-end Gen AI application with deployment</li>
-                                <li>Multi-agent system for complex tasks</li>
-                                <li>Production RAG system with monitoring</li>
+                                <li>End-to-end ML/DL projects with deployment</li>
+                                <li>RAG systems and AI agents</li>
+                                <li>Production-ready Gen AI applications</li>
                             </ul>
                         </div>
                         <div class="step-goal">
-                            <strong>Goal:</strong> Create a portfolio that demonstrates Gen AI expertise
+                            <strong>Goal:</strong> Build comprehensive AI portfolio showcasing all skills
                         </div>
                     </div>
                 </div>

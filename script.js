@@ -1,4 +1,47 @@
 // ===========================
+// PATH TOGGLE FUNCTIONALITY
+// ===========================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButtons = document.querySelectorAll('.toggle-option');
+    const traditionalRoadmap = document.getElementById('traditional-roadmap');
+    const modernRoadmap = document.getElementById('modern-roadmap');
+    const traditionalInfo = document.getElementById('traditional-info');
+    const modernInfo = document.getElementById('modern-info');
+
+    // Set traditional as default
+    if (traditionalRoadmap) traditionalRoadmap.style.display = 'block';
+    if (modernRoadmap) modernRoadmap.style.display = 'none';
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const path = button.getAttribute('data-path');
+
+            // Update active state
+            toggleButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Show/hide corresponding roadmap
+            if (path === 'traditional') {
+                traditionalRoadmap.style.display = 'block';
+                modernRoadmap.style.display = 'none';
+                traditionalInfo.classList.add('active');
+                modernInfo.classList.remove('active');
+            } else {
+                traditionalRoadmap.style.display = 'none';
+                modernRoadmap.style.display = 'block';
+                traditionalInfo.classList.remove('active');
+                modernInfo.classList.add('active');
+            }
+
+            // Smooth scroll to roadmap
+            const targetSection = path === 'traditional' ? traditionalRoadmap : modernRoadmap;
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+});
+
+// ===========================
 // SCROLL ANIMATIONS
 // ===========================
 
@@ -60,20 +103,20 @@ function updateTimelineProgress() {
 
     const timelineRect = timeline.getBoundingClientRect();
     const windowHeight = window.innerHeight;
-    
+
     // Calculate visible progress
     const timelineTop = timelineRect.top;
     const timelineHeight = timelineRect.height;
-    
+
     let progress = 0;
-    
+
     if (timelineTop < windowHeight && timelineTop + timelineHeight > 0) {
         const visibleHeight = Math.min(windowHeight - timelineTop, timelineHeight);
         progress = (visibleHeight / timelineHeight) * 100;
     } else if (timelineTop + timelineHeight < windowHeight) {
         progress = 100;
     }
-    
+
     progress = Math.max(0, Math.min(100, progress));
 }
 
@@ -88,7 +131,7 @@ window.addEventListener('resize', updateTimelineProgress);
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroBackground = document.querySelector('.hero-background');
-    
+
     if (heroBackground && scrolled < window.innerHeight) {
         heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
     }
@@ -106,16 +149,16 @@ cards.forEach(card => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        
+
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-        
+
         const rotateX = (y - centerY) / 20;
         const rotateY = (centerX - x) / 20;
-        
+
         card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
     });
-    
+
     card.addEventListener('mouseleave', () => {
         card.style.transform = '';
     });
@@ -131,19 +174,19 @@ let hueRotation = 0;
 function animateGradients() {
     hueRotation += 0.5;
     if (hueRotation >= 360) hueRotation = 0;
-    
+
     const heroBackground = document.querySelector('.hero-background');
     if (heroBackground) {
         heroBackground.style.filter = `hue-rotate(${hueRotation}deg)`;
     }
-    
+
     requestAnimationFrame(animateGradients);
 }
 
 // Start gradient animation
 animateGradients();
 
-// ===========================
+// ============================
 // SCROLL TO TOP BUTTON (Optional Enhancement)
 // ===========================
 
@@ -221,10 +264,10 @@ scrollTopBtn.addEventListener('click', () => {
 window.addEventListener('load', () => {
     // Initial timeline progress update
     updateTimelineProgress();
-    
+
     // Add loaded class to body for any CSS animations
     document.body.classList.add('loaded');
-    
+
     console.log('🚀 AI Learning Roadmap 2026 - Ready!');
 });
 
@@ -232,7 +275,7 @@ window.addEventListener('load', () => {
 // PERFORMANCE OPTIMIZATION
 // ===========================
 
-// Debounce function for scroll events
+//Debounce function for scroll events
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
