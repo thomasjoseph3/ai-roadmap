@@ -298,7 +298,7 @@ body {
 .roadmap-section,
 .considerations-section,
 .takeaway-section {
-    padding: var(--spacing-4xl) 0;
+    padding: var(--spacing-3xl) 0;
     position: relative;
 }
 
@@ -384,7 +384,7 @@ body {
 .step-card {
     background: var(--bg-card);
     border-radius: var(--radius-lg);
-    padding: var(--spacing-2xl);
+    padding: var(--spacing-xl);
     margin-left: calc(50% + 80px);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -405,38 +405,38 @@ body {
 }
 
 .step-icon {
-    font-size: 3rem;
-    margin-bottom: var(--spacing-md);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
 }
 
 .step-title {
     font-family: var(--font-heading);
-    font-size: 1.875rem;
+    font-size: 1.625rem;
     font-weight: 700;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
     color: var(--text-highlight);
     letter-spacing: -0.01em;
 }
 
 .step-description {
     color: var(--text-secondary);
-    margin-bottom: var(--spacing-lg);
-    line-height: 1.75;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.65;
 }
 
 .step-topics {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.625rem;
-    margin-bottom: var(--spacing-lg);
+    gap: 0.5rem;
+    margin-bottom: var(--spacing-md);
 }
 
 .topic-tag {
-    padding: 0.5rem 1.125rem;
+    padding: 0.4rem 0.875rem;
     background: rgba(139, 92, 246, 0.15);
     border: 1px solid rgba(139, 92, 246, 0.4);
     border-radius: var(--radius-full);
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     color: var(--accent-cyan);
     font-weight: 500;
     transition: all 0.2s ease;
@@ -449,31 +449,31 @@ body {
 
 .step-projects {
     background: rgba(0, 0, 0, 0.3);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
     border-radius: var(--radius-md);
     border-left: 4px solid var(--accent-purple);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
 }
 
 .step-projects strong {
     color: var(--accent-purple);
     display: block;
-    margin-bottom: var(--spacing-sm);
-    font-size: 1.05em;
+    margin-bottom: 0.375rem;
+    font-size: 1em;
 }
 
 .step-projects ul {
-    margin-left: var(--spacing-lg);
+    margin-left: var(--spacing-md);
     color: var(--text-secondary);
 }
 
 .step-projects li {
-    margin-bottom: var(--spacing-sm);
-    line-height: 1.6;
+    margin-bottom: 0.375rem;
+    line-height: 1.5;
 }
 
 .step-goal {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-md);
     background: rgba(6, 182, 212, 0.1);
     border-radius: var(--radius-md);
     border-left: 4px solid var(--accent-cyan);
@@ -482,7 +482,7 @@ body {
 
 .step-goal strong {
     color: var(--accent-cyan);
-    font-size: 1.05em;
+    font-size: 1em;
 }
 
 /* ===========================
@@ -494,8 +494,8 @@ body {
 
 .considerations-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: var(--spacing-2xl);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-xl);
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -503,7 +503,7 @@ body {
 .consideration-card {
     background: var(--bg-card);
     border-radius: var(--radius-lg);
-    padding: var(--spacing-2xl);
+    padding: var(--spacing-xl);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -535,40 +535,40 @@ body {
 }
 
 .consideration-number {
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     background: var(--gradient-accent);
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    margin-bottom: var(--spacing-lg);
-    font-size: 1.375rem;
+    margin-bottom: var(--spacing-md);
+    font-size: 1.25rem;
 }
 
 .consideration-title {
     font-family: var(--font-heading);
-    font-size: 1.375rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
     letter-spacing: -0.01em;
 }
 
 .consideration-text {
     color: var(--text-secondary);
-    margin-bottom: var(--spacing-lg);
-    line-height: 1.75;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.65;
 }
 
 .consideration-tip {
-    padding: var(--spacing-md);
+    padding: var(--spacing-sm);
     background: rgba(236, 72, 153, 0.1);
     border-radius: var(--radius-md);
     border-left: 4px solid var(--accent-pink);
     color: var(--text-secondary);
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.875rem;
+    line-height: 1.5;
 }
 
 .consideration-tip strong {
@@ -588,22 +588,22 @@ body {
     text-align: center;
     background: var(--bg-card);
     border-radius: var(--radius-lg);
-    padding: var(--spacing-3xl);
+    padding: var(--spacing-2xl);
     backdrop-filter: blur(10px);
     border: 2px solid rgba(139, 92, 246, 0.3);
     box-shadow: var(--shadow-xl), var(--shadow-glow-purple);
 }
 
 .takeaway-icon {
-    font-size: 4.5rem;
-    margin-bottom: var(--spacing-lg);
+    font-size: 3.5rem;
+    margin-bottom: var(--spacing-md);
 }
 
 .takeaway-title {
     font-family: var(--font-heading);
-    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-size: clamp(1.875rem, 4vw, 2.5rem);
     font-weight: 700;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
